@@ -7,3 +7,4 @@ data prop in Vue instance is like state in react. We define our state in data pr
 methods is where we define the change we want to make on the state. Whenever a change happen to data the template will be rendered again!
 computed is defined whenever we want to make some calculation on the data before rendering something on the screen!
 {{}} is placed in HTML and will give the value of an entity and we can right a bit of js in it!
+To start Vue server just run "npm run serve"
