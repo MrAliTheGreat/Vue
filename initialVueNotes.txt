@@ -1,0 +1,9 @@
+Vue Template is in charge of showing content to the user and is placed in the HTML part of the app. It describes the structure and content of our app! 
+Vue Instance describes what happens when a user interacts with our app and is placed in the JS part of the app.
+el prop in Vue instance is for tying one Vue template to a Vue instance. Like it says that this instance is for that template! el will have value of something like "#idInHTML" which means that go look for a element in HTML that has the id of idInHTML. So, for making the connection, we need to add an id to the element in HTML. Then the instance and template will be tied together! (# means id!)
+Methods are used to respond to user events. methods prop is used and it will have a value of an obj. In the obj we will name the funcs as key and define them in the value.
+A directive is a piece of template syntax inside a view that somehow enhances the behaviour of normal HTML. So what happens is that when we connect our template with the instance, Vue will look for directives in the template and parses them. A prop of v-on in a html tag is used to incorporate a directive. v-on:eventName="methodName" will create a directive and watches for a event of eventName to happen. When it happens then the method methodName which is declared in methods prop of Vue instance will be executed! Cool!!!
+data prop in Vue instance is like state in react. We define our state in data prop and give it an initial value.
+methods is where we define the change we want to make on the state. Whenever a change happen to data the template will be rendered again!
+computed is defined whenever we want to make some calculation on the data before rendering something on the screen!
+{{}} is placed in HTML and will give the value of an entity and we can right a bit of js in it!
