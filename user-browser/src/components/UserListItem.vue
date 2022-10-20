@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <li class="list-group-item">
         {{ user.name.first + " " + user.name.last }} - {{ user.email }} - {{ user.cell }}
     </li>
 </template>
