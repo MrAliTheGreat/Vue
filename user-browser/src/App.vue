@@ -48,3 +48,6 @@ export default {
 <!-- For sending prop from parent to child we have to use v-bind:propName="dataName" in the parent -->
 <!-- the v-bind means that whenever there is an update to dataName, rerender this component and send the updated dataName to the child -->
 <!-- We can also use :propName="dataName" instead of v-bind:propName="dataName" -->
+
+<!-- For styling we are going to use bootstrap css -->
+<!-- Installing bootstrap is done by providing the link to it in index.html file in the public directory! -->
