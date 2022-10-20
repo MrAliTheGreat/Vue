@@ -4,6 +4,7 @@
             v-for="user in users"
             :user="user"
             :key="user.email"
+            @userSelect="onUserSelect"
         >
         </UserListItem>
     </ul>
@@ -17,6 +18,11 @@ export default {
     props: ["users"],
     components: {
         UserListItem
+    },
+    methods: {
+        onUserSelect(user) {
+            this.$emit("userSelect", user)
+        }
     }
 }
 </script>

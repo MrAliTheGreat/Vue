@@ -1,25 +1,30 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <UserList :users="users"></UserList>
+        <UserDetail :user="selectedUser"></UserDetail>
+        <UserList @userSelect="onUserSelect" :users="users"></UserList>
     </div>
 </template>
 
 <script>
 import SearchBar from "./components/SearchBar.vue"
 import UserList from "./components/UserList.vue"
+import UserDetail from "./components/UserDetail.vue"
+
 import axios from "axios"
 
 export default {
     name: "App",
     data() {
         return {
-            users: []
+            users: [],
+            selectedUser: null
         }
     },
     components: {
         SearchBar,
-        UserList
+        UserList,
+        UserDetail
     },
     methods: {
         async onTermChange(numUsers) {
@@ -30,6 +35,9 @@ export default {
                 }
             })
             this.users = response.data.results
+        },
+        onUserSelect(user) {
+            this.selectedUser = user
         }
     }
 }
