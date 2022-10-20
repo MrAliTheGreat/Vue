@@ -1,6 +1,5 @@
 <template>
     <ul>
-        User List
         <UserListItem 
             v-for="user in users"
             :user="user"

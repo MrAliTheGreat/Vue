@@ -1,6 +1,5 @@
 <template>
-    <div>
-        Hello World!
+    <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
         <UserList :users="users"></UserList>
     </div>
@@ -51,3 +50,6 @@ export default {
 
 <!-- For styling we are going to use bootstrap css -->
 <!-- Installing bootstrap is done by providing the link to it in index.html file in the public directory! -->
+<!-- Whenever we use bootstrap it assumes that our root element has a class of container -->
+<!-- So, the main element in App.vue has a container class -->
+<!-- This container class is used for better aligning items in our project -->

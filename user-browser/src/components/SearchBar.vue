@@ -15,7 +15,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+input {
+    width: 75%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div {
+    text-align: center;
+    margin: 10px;
+}
+
 </style>
 
 
@@ -29,3 +45,6 @@ export default {
 <!-- We can also pass a useful element with the name so that it can be used when listening for the termChange event -->
 
 <!-- IMPORTANT NOTE!!! ==> arrow func and "this" does not work with each other so we have to define each method like above or use function -->
+
+<!-- By adding scoped to style tag we make sure that whatever styling we use here is ONLY considered in this template and nowhere else -->
+<!-- You can either use the name tag for css or use .styleName and specify class="styleName" on the element -->
