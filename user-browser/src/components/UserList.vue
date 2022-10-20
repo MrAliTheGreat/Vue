@@ -1,5 +1,5 @@
 <template>
-    <ul class="list-group">
+    <ul style="max-height: 370px; overflow-y: scroll; scrollbar-width: none;" class="list-group col-md-4">
         <UserListItem 
             v-for="user in users"
             :user="user"
@@ -40,3 +40,4 @@ export default {
 <!-- We can use predefined stylings of bootstrap to style our components! Just search on getbootstrap.com! -->
 <!-- Like for list we can use list-group on ul and list-group-item on li to get a table like styling -->
 <!-- list-group and list-group-item are predefined in bootstrap! -->
+<!-- scrollbar-width: none will remove scrollbar but keep the functionality in FIREFOX! -->

@@ -1,8 +1,10 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <UserDetail :user="selectedUser"></UserDetail>
-        <UserList @userSelect="onUserSelect" :users="users"></UserList>
+        <div class="row">
+            <UserDetail :user="selectedUser"></UserDetail>
+            <UserList @userSelect="onUserSelect" :users="users"></UserList>
+        </div>
     </div>
 </template>
 
@@ -61,3 +63,7 @@ export default {
 <!-- Whenever we use bootstrap it assumes that our root element has a class of container -->
 <!-- So, the main element in App.vue has a container class -->
 <!-- This container class is used for better aligning items in our project -->
+
+<!-- By providing class="row" all elements in div will be placed in row instead of column -->
+<!-- But the elements will take all the place they have so for truly showing elements in a row we have to specifiy -->
+<!-- the amount of space each element can have so use something like bootstrap col-md or any other way! -->
